@@ -6,7 +6,10 @@ El proyecto consiste en consumir los datos de una API, en este caso se llevó a 
   - 1) Para poder mostrar los paises
   - 2) Para poder mostrar el clima de la capital del pais seleccionado
   
-El caso desarrollado básicamente se trata sobre el clima de la capital de un pais
+El caso desarrollado básicamente se trata sobre el clima de la capital de un pais.
+Fue realizado como Trabajo Práctico para la cátedra "Programación Avanzada". 
+
+Universidad Tecnológica Nacional - Facultad Regional de Mendoza
 
 ## Further help
 
