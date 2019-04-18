@@ -1,0 +1,106 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    font-family: 'Allerta', sans-serif;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* background-image: url('./images/sky.jpg'); */
+    /* background-size: 100%; */
+}
+
+.fondo {
+    background-image: url("./assets/images/fondo1.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.fondoInicio {
+    background-color: white;
+    opacity: 0.8;
+}
+
+.opcionPais {
+    margin: 0px auto;
+}
+
+select {
+    width: 100%;
+}
+
+.informacionPais {
+    border: 2px solid;
+    border-radius: 20px;
+    border-color: dimgrey;
+    min-height: 190px;
+}
+
+.informacion {
+    margin: 15px;
+    padding: 0px 15px;
+}
+
+.datosPais {
+    float: left;
+}
+
+.verClima {
+    margin: 0px auto;
+    text-align: center;
+}
+
+.linkClima img {
+    margin: 0px auto;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.infoclima {
+    float: right;
+}
+
+.subfila {
+    text-align: center;
+}
+
+.pronostico {
+    display: inline-block;
+}
+
+.banderapais {
+    width: 100%;
+}
+
+.datospais {
+    width: 100%;
+}
+
+.pronosticotabla table {
+    width: 100%;
+    border: 1px solid grey;
+}
+
+.tablaclima table {
+    width: 100%;
+    border: 1px solid grey;
+}
+
+.tablaclima th,
+td {
+    text-align: center;
+    vertical-align: auto;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.api {
+    text-align: center;
+}
+
+.imageapi {
+    width: 100%;
+}

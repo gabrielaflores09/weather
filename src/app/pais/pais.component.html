@@ -1,0 +1,56 @@
+<div class="fondo">
+    <div class="container fondoInicio">
+        <br>
+        <div class="opcionPais  col-lg-4 col-md-4 col-sm-8 col-11">
+            <select [(ngModel)]="pais">
+                <option *ngFor="let item of paises" (click)="mostrarinfo(item)">{{item.name}}</option>
+            </select>
+        </div>
+        <br>
+        <div class="informacionPais container">
+            <div class="informacion">
+                <div *ngIf="pais" class="subfila row">
+                    <div class="col-12 col-sm-10 col-md-7 col-lg-5 container">
+                        <img class="banderapais" src="{{flag}}" alt="bandera {{name}}">
+                    </div>
+                    <div class="col-12 col-sm-7 col-md-5 col-lg-5 container">
+                        <table class="datospais">
+                            <tbody>
+                                <th>Información</th>
+                                <tr>
+                                    <td> <span>Capital</span></td>
+                                    <td>{{capital}}</td>
+                                </tr>
+                                <tr>
+                                    <td> <span>Region</span></td>
+                                    <td>{{region}}</td>
+                                </tr>
+                                <tr>
+                                    <td> <span>Subregion</span></td>
+                                    <td>{{subregion}}</td>
+                                </tr>
+                                <tr>
+                                    <td> <span>Ubicación</span></td>
+                                    <td>{{latlng}}</td>
+                                </tr>
+                                <tr>
+                                    <td> <span>Area</span></td>
+                                    <td>{{area}} Km2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="verClima col-4 col-sm-3 col-md-2 col-lg-1">
+            <a *ngIf="pais" class="verClima" [routerLink]="['/clima/'+ capital]">
+                <div class="linkClima">
+                    <span>CLIMA</span>
+                    <img src="../../assets/images/icon.png">
+                </div>
+            </a>
+        </div>
+        <br>
+    </div>
+</div>

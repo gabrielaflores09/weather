@@ -1,0 +1,93 @@
+<div class="fondo">
+    <div class="container fondoInicio">
+        <br>
+        <div *ngIf="forescat" class="pronostico  col-md-8">
+            <h4>Pronóstico de los próximos 5 días - intervalo: 3 horas</h4>
+            <br>
+            <div class="pronosticotabla">
+                <table class="infotablaforescat">
+                    <thead>
+                        <th>Simbolo</th>
+                        <th>Clima</th>
+                        <th>Fecha-Hora</th>
+                        <th>Temp.Max</th>
+                        <th>Temp.Min</th>
+                        <th>Viento</th>
+                        <th>Humedad</th>
+                    </thead>
+                    <tbody class="tablapronost">
+                        <tr *ngFor="let item of forescat.list">
+                            <td>
+                                <img src="//openweathermap.org/img/w/{{item.weather[0].icon}}.png" width="70" height="70">
+                            </td>
+                            <td>
+                                <span>{{item.weather[0].main}}</span>
+                            </td>
+                            <td>{{item.dt_txt}}</td>
+                            <td>
+                                <span>{{item.main.temp_max}} K</span>
+                            </td>
+                            <td>
+                                <span>{{item.main.temp_min}} K</span>
+                            </td>
+
+                            <td>
+                                <span>{{item.wind.speed}} m/s </span>
+                            </td>
+                            <td>
+                                <span>{{item.main.humidity}} %</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div *ngIf="clima" class="infoclima  col-md-4">
+            <div class='tablaclima'>
+                <h2>{{clima.name}},{{clima.sys.country}}</h2>
+                <h3>{{clima.weather[0].main}} <img class="iconetemp" alt="iconclima" src="https://openweathermap.org/img/w/{{clima.weather[0].icon}}.png" width="50" height="50"></h3>
+                <h4>Temperatura Actual: {{clima.main.temp}} K</h4>
+                <table class="infotablaclima">
+                    <tbody>
+                        <tr>
+                            <td> <span>Temperatura Maxima</span></td>
+                            <td>{{clima.main.temp_max}} K</td>
+                        </tr>
+                        <tr>
+                            <td><span>Temperatura Minima</span></td>
+                            <td>{{clima.main.temp_min}} K</td>
+                        </tr>
+                        <tr>
+                            <td><span>Viento</span></td>
+                            <td>{{clima.wind.speed}} m/s</td>
+                        </tr>
+                        <tr>
+                            <td><span>Nubosidad</span></td>
+                            <td>{{clima.clouds.all}}%</td>
+                        </tr>
+                        <tr>
+                            <td><span>Visibilidad</span></td>
+                            <td>{{clima.visibility}} metros</td>
+                        </tr>
+                        <tr>
+                            <td><span>Presión</span></td>
+                            <td>{{clima.main.pressure}} hpa</td>
+                        </tr>
+                        <tr>
+                            <td><span>Humedad</span></td>
+                            <td>{{clima.main.humidity}} %</td>
+                        </tr>
+                        <tr>
+                            <td><span>Latitud</span></td>
+                            <td>{{clima.coord.lat}}</td>
+                        </tr>
+                        <tr>
+                            <td><span>Longitud</span></td>
+                            <td>{{clima.coord.lon}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
